@@ -439,8 +439,49 @@ header {
         position: absolute;
         left: 80%;
     }
+    .hamburgerMenu:hover{
+        cursor: pointer;
+    }
     .nav-menu{
         display: none;
+    }
+    .nav-menu.active{
+        display: flex;
+        position: absolute;
+    }
+    .nav-menu.active ul{
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        text-align: center;
+        align-items: center;
+        justify-content: space-around;
+        margin: auto;
+        padding: 0;
+        background-color: var(--white);
+        color: var(--veryDarkGrayishBlue);
+        top: 3rem;
+        left: 14rem;
+        width: 26rem;
+        min-height: 20rem;
+    }
+
+    .nav-menu.active ul::after{
+        content: '';
+        width: 0;
+        height: 0;
+        border-left: 16px solid transparent;
+        border-right: 4px solid transparent;
+        border-bottom: 20px solid var(--white);
+        position: absolute;
+        right: 0;
+        top: -18px;
+    }
+    .nav-menu.active ul li{
+        margin: 1rem;
+    }
+    .btn-contact {
+        background-color: var(--yellow);
     }
     
 }
@@ -517,6 +558,7 @@ header {
         margin: 5rem 0;
         font-size: 1.5rem;
     }
+
     .nav-menu.active{
         display: flex;
         position: absolute;
